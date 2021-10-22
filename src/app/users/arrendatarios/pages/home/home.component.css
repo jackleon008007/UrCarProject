@@ -1,0 +1,75 @@
+.example-table {
+  width: 700px;
+  margin: 2vw 0 2vw 0;
+  position: initial;
+  height:100%;
+}
+
+.cards-spacer{
+  max-width: 800px;
+  background-color: gray;
+  display: block;
+  margin-top:0;
+  max-height: 7000px;
+}
+.bar-right{
+  width:22vw;
+  height: 100%;
+  background-color: white;
+
+}
+.bar-left{
+  width:23vw;
+  height:100%;
+  background-color: white;
+
+
+}
+.section-cards{
+  width:100%;
+  height:300%;
+}
+.section-cards div{
+  display: inline-block;
+  float:left;
+  height:100%;
+
+}
+
+
+.filter-card{
+  max-height:100%;
+  background-color: transparent;
+  position: fixed;
+  width:20vw;
+}
+.result{
+  background-color: transparent;
+  position: fixed
+}
+.search-bar{
+  padding:1%;
+}
+
+
+.mat-elevation-z8{
+  width:100%;
+}
+
+.Posts-card{
+  position:initial;
+}
+
+.btn-reserv{
+  float:right;
+  background-color: darkgrey;
+  position:initial;
+}
+
+.Posts-card button{
+  position:initial;
+}
+.Posts-card button:hover{
+  position:initial;
+  background-color: lightblue;
+}

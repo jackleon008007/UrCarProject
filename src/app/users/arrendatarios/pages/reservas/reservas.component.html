@@ -1,0 +1,55 @@
+
+<section class="reservas-section">
+
+
+  <div class ="bar-reserv">
+    <div class="admin-cars">
+      <button >Agregar Vehiculo</button>
+    </div>
+  </div>
+
+
+  <div class="card-list">
+    <mat-card class="reserve-table">
+
+      <table mat-table [dataSource]="dataSource1" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>id</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>title</th>
+          <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>price</th>
+          <td mat-cell *matCellDef="let element">{{ element.price}}</td>
+        </ng-container>
+        <ng-container matColumnDef="ID-cars">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>ID-car</th>
+          <td mat-cell *matCellDef="let element">{{ element.idCar}}</td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let element">
+
+            <a href="javascript:void(0)" (click)="deleteItem(element.id)">
+              <mat-icon>delete</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"
+            [ngClass]="{ 'editable-row' : reservaData.id == row.id }">
+        </tr>
+      </table>
+      <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+    </mat-card>
+
+  </div>
+
+
+
+
+</section>

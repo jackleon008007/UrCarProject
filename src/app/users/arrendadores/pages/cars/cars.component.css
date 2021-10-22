@@ -1,0 +1,39 @@
+
+.grid-container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+   
+    grid-template-columns: repeat(1,1fr) ;
+    grid-gap: 50px;
+  }
+  @media(min-width: 576px){
+    .grid-container {
+        max-width:1100px ; 
+        padding-right: 16px;
+        padding-left: 16px;
+        margin-right: auto;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr) ;
+        grid-gap: 50px;
+      }
+  }
+
+
+.example-card {
+    max-width: 400px;
+    
+  }
+  .mat-card-image{
+      height: 250px;
+      width: 400;
+  
+  }
+  .example-header-image {
+    background-image: url("../../../../../assets/cars/user.png");
+    background-size: cover;
+  }

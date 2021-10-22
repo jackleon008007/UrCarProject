@@ -1,0 +1,48 @@
+body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+
+.chatContainer {
+  padding: 30px;
+  width: 100%;
+  height: max-content;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+
+  }
+
+.remoto{
+  padding: 20px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  max-width: 80%;
+  color: black;
+  font-size: 17px;
+  align-self: flex-start;
+}
+
+.local{
+  padding: 20px;
+  border-radius: 20px;
+  background-color: dodgerblue;
+  max-width: 80%;
+  color:white;
+  font-size: 17px;
+  align-self: flex-end;
+  margin-right: 50px;
+
+}
+
+.inputContainer{
+  background-color: whitesmoke;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+input{
+  width: 100%;
+}
+

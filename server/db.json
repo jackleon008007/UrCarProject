@@ -1,0 +1,209 @@
+{
+  "arrendadores": [
+    {
+      "id": 1,
+      "name": "Jack",
+      "age": 30,
+      "address": "Unknown",
+      "type": "Ar",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Roberto",
+      "age": 30,
+      "address": "Unknown",
+      "type": "Ar",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Sebastian",
+      "age": 30,
+      "address": "Unknown",
+      "type": "Ar",
+      "password": "123"
+    }
+  ],
+  "arrendatarios": [
+    {
+      "id": 1,
+      "name": "Manuel Asencio",
+      "age": 30,
+      "address": "Unknown",
+      "type": "A",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "Marcos",
+      "age": 31,
+      "address": "raaa",
+      "type": "A",
+      "password": "123"
+    },
+    {
+      "id": 3,
+      "name": "Marcela",
+      "age": 15,
+      "address": "alla",
+      "type": "A",
+      "password": "123"
+    },
+    {
+      "id": 4,
+      "name": "Maria",
+      "age": 40,
+      "address": "fue man",
+      "type": "A",
+      "password": "123"
+    }
+  ],
+  "Skills": [
+    {
+      "id": 1,
+      "name": "Backend Developer"
+    },
+    {
+      "id": 2,
+      "name": "Frontend Developer"
+    },
+    {
+      "id": 3,
+      "name": "Mobile Developer"
+    },
+    {
+      "id": 4,
+      "name": "Game Developer"
+    }
+  ],
+  "competences": [
+    {
+      "id": 1,
+      "arrendatarioId": 1,
+      "skillId": 1
+    },
+    {
+      "id": 2,
+      "arrendatarioId": 2,
+      "skillId": 2
+    },
+    {
+      "id": 3,
+      "arrendatarioId": 3,
+      "skillId": 3
+    },
+    {
+      "id": 4,
+      "arrendatarioId": 4,
+      "skillId": 4
+    }
+  ],
+  "cars_x": [
+    {
+      "id": 1,
+      "image": "assets/cars/car1.png",
+      "title": "Onix-Sedán",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet. "
+    },
+    {
+      "id": 2,
+      "image": "assets/cars/car2.png",
+      "title": "Onix-Sedán",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet. "
+    },
+    {
+      "id": 3,
+      "image": "assets/cars/car3.png",
+      "title": "Onix-Sedán",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet. "
+    },
+    {
+      "id": 4,
+      "image": "assets/cars/car4.png",
+      "title": "onix-sedan",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet. "
+    },
+    {
+      "id": 5,
+      "image": "assets/cars/car5.png",
+      "title": "Onix-Sedán",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet. "
+    },
+    {
+      "id": 6,
+      "image": "assets/cars/car6.png",
+      "title": "Onix-Sedán",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet. "
+    },
+    {
+      "id": 7,
+      "image": "../assets/cars/car8.png",
+      "title": "NUEVO AU",
+      "price": 600,
+      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda"
+    }
+  ],
+  "reserva": [
+    {
+      "id": 1,
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1
+    },
+    {
+      "id": 2,
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 2
+    },
+    {
+      "id": 3,
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 3
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 6,
+      "id": 4
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 2,
+      "id": 6
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 3,
+      "id": 7
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 8
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 2,
+      "id": 9
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 10
+    }
+  ]
+}

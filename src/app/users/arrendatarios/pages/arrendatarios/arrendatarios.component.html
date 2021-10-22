@@ -1,0 +1,38 @@
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <a class="Ucar-buttom" mat-button [routerLink]="'/arrendatarios/home'" >
+      <mat-icon class="mat-icon-ucar" svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon>
+      <span>URCAR</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button [routerLink]="'/arrendatarios/home'" >Inicio</a>
+      <a mat-button [routerLink]="'/arrendatarios/profile'" >Perfil</a>
+      <a mat-button [routerLink]="'/arrendatarios/reservas'" >Reservas</a>
+      <a mat-button [routerLink]="'/arrendatarios/message'" >chat</a>
+      <a mat-button [routerLink]="'/arrendatarios/configuration'" >Settings</a>
+    </div>
+  </mat-toolbar>
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button [routerLink]="'/arrendatarios/home'" >Inicio</a>
+        <a mat-button [routerLink]="'/arrendatarios/profile'" >Perfil</a>
+        <a mat-button [routerLink]="'/arrendatarios/reservas'" >Reservas</a>
+        <a mat-button [routerLink]="'/arrendatarios/message'" >chat</a>
+        <a mat-button [routerLink]="'/arrendatarios/configuration'" >Settings</a>
+      </div>
+    </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+
+
+
+

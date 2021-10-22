@@ -1,0 +1,49 @@
+.reservas-section div{
+  float: left;
+  display: inline-block;
+}
+
+.reservas-section{
+  height: 100%;
+  width: 100%;
+}
+.bar-reserv{
+  width:10vw;
+  max-height:100%;
+  height:800px;
+  background-color: darkgoldenrod;
+  float: left;
+
+}
+.admin-cars{
+  width: 10vw;
+  height: 100%;
+  background-color: #1976d2;
+  position:fixed;
+
+}
+.admin-cars button{
+  margin: 2vw 1vw;
+}
+
+.card-list{
+  width:83.8%;
+  padding:3vw;
+  background-color: gray;
+  position: initial;
+}
+
+.mat-list-item:hover{
+  background-color: cadetblue;
+}
+.mat-list-item{
+  width:50%;
+  background-color: darkslategray;
+  position: initial;
+}
+.mat-elevation-z8{
+  width:100%;
+}
+.reserve-table{
+  position:initial;
+}
