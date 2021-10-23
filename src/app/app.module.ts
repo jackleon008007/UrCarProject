@@ -51,6 +51,7 @@ import { NavComponent } from './users/arrendadores/pages/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ChatComponent } from './component/chat/chat.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { PostDetailsComponent } from './component/post-details/post-details.component';
 
 
 
@@ -82,6 +83,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     CarFormComponent,
     NavComponent,
     ChatComponent,
+    PostDetailsComponent,
 
 
 

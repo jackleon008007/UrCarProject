@@ -82,10 +82,12 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>Me Gusta</button>
+          <button (click)="navigateToPostDetails(element.id)">Ver mas...</button>
+          <button mat-button (click)="Addlike(element.id)">Me Gusta {{element.likes}}</button>
           <button mat-button>Compartir</button>
           <button mat-button class="btn-reserv" (click)="addNewReserve(element.id,element.title,element.price)">Reservar</button>
         </mat-card-actions>
+
       </mat-card>
     </mat-list>
 

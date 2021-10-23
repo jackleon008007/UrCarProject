@@ -105,49 +105,56 @@
       "image": "assets/cars/car1.png",
       "title": "Onix-Sedán",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet. "
+      "description": "Lorem ipsum dolor sit amet. ",
+      "likes": 36
     },
     {
       "id": 2,
       "image": "assets/cars/car2.png",
       "title": "Onix-Sedán",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet. "
+      "description": "Lorem ipsum dolor sit amet. ",
+      "likes": 7
     },
     {
       "id": 3,
       "image": "assets/cars/car3.png",
       "title": "Onix-Sedán",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet. "
+      "description": "Lorem ipsum dolor sit amet. ",
+      "likes": 0
     },
     {
       "id": 4,
       "image": "assets/cars/car4.png",
       "title": "onix-sedan",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet. "
+      "description": "Lorem ipsum dolor sit amet. ",
+      "likes": 4
     },
     {
       "id": 5,
       "image": "assets/cars/car5.png",
       "title": "Onix-Sedán",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet. "
+      "description": "Lorem ipsum dolor sit amet. ",
+      "likes": 3
     },
     {
       "id": 6,
       "image": "assets/cars/car6.png",
       "title": "Onix-Sedán",
       "price": 100,
-      "description": "Lorem ipsum dolor sit amet. "
+      "description": "Lorem ipsum dolor sit amet. ",
+      "likes": 0
     },
     {
       "id": 7,
       "image": "../assets/cars/car8.png",
       "title": "NUEVO AU",
       "price": 600,
-      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda"
+      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda",
+      "likes": 0
     }
   ],
   "reserva": [
@@ -204,6 +211,18 @@
       "price": 100,
       "idCar": 1,
       "id": 10
+    },
+    {
+      "title": "onix-sedan",
+      "price": 100,
+      "idCar": 4,
+      "id": 11
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 12
     }
   ]
 }

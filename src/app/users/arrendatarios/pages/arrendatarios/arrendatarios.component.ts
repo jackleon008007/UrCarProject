@@ -2,6 +2,7 @@ import { Component, OnInit,AfterViewInit, ViewChild } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 import {  Input } from "@angular/core";
+import {Router} from "@angular/router";
 
 const THUMBUP_ICON = `
   <svg xmlns="http://www.w3.org/2000/svg" width="702" height="582" viewBox="0 0 702 582" fill="none">
@@ -30,14 +31,13 @@ const THUMBUP_ICON2 = `<svg xmlns="http://www.w3.org/2000/svg" enable-background
 export class ArrendatariosComponent implements OnInit {
 
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer,) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private router: Router) {
     iconRegistry.addSvgIconLiteral('thumbs-up', sanitizer.bypassSecurityTrustHtml(THUMBUP_ICON));
     iconRegistry.addSvgIconLiteral('thumbs-up1', sanitizer.bypassSecurityTrustHtml(THUMBUP_ICON2));
   }
 
   ngOnInit(): void {
   }
-
 
 }
 

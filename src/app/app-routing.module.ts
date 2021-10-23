@@ -20,6 +20,7 @@ import {PoliticAndPrivacyAComponent} from "./users/arrendadores/pages/politic-an
 import {ConfigurationAComponent} from "./users/arrendadores/pages/configuration-a/configuration-a.component";
 import { CarFormComponent}   from './users/arrendadores/pages/car-form/car-form.component';
 import { ChatComponent } from './component/chat/chat.component'
+import {PostDetailsComponent} from "./component/post-details/post-details.component";
 
 const routes: Routes = [
 
@@ -28,20 +29,21 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: '',redirectTo: 'login',pathMatch:'full'},
 
-  {path: 'arrendadores',redirectTo: 'arrendadores/cars',pathMatch:'full'},
+  {path: 'arrendadores',redirectTo: 'arrendadores/home-a',pathMatch:'full'},
   {path: 'arrendadores', component: ArrendadoresComponent,
     children:[
       {path: 'home-a', component: HomeAComponent},
       {path: 'profile-a', component: ProfileAComponent},
       {path: 'cars', component: CarsComponent},
       {path: 'configuration-a', component: ConfigurationAComponent},
-      {path: 'message-a', component: MessageAComponent},
+      {path: 'message-a', component: MessageAComponent,
+        children:[
+          {path: 'chat', component:ChatComponent}
+        ]},
       {path: 'reservations-a', component: ReservationsAComponent},
       {path: 'politic-and-privacy-a', component: PoliticAndPrivacyAComponent},
       {path: 'create', component:CarFormComponent},
       {path: 'chat', component:ChatComponent}
-
-
     ]
   },
 
@@ -51,11 +53,15 @@ const routes: Routes = [
       {path: 'home', component: HomeComponent},
       {path: 'profile', component: ProfileComponent},
       {path: 'reservas', component: ReservasComponent},
-      {path: 'message', component: MessageComponent},
+      {path: 'message', component: MessageComponent,
+        children:[
+          {path: 'chat', component:ChatComponent}
+        ]
+      },
       {path: 'configuration', component: ConfigurationComponent},
       {path: 'account', component: AccountComponent},
       {path: 'politic-and-privacy', component: PoliticAndPrivacyComponent},
-      {path: 'chat', component:ChatComponent}
+      {path:'PostDetails', component:PostDetailsComponent}
     ]
 
   }
