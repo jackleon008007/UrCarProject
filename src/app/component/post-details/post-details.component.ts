@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PostdetailsService} from "../../services/postdetails.service";
-import {CarsService} from "../../users/arrendadores/services/cars.service";
-import {Car} from "../../users/arrendadores/model/cars";
+import {CarsService} from "../../users/lessors/services/cars.service";
+import {Car} from "../../users/lessors/model/cars";
 
 
 @Component({

@@ -1,0 +1,41 @@
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <a class="Ucar-buttom" mat-button [routerLink]="'/lessors/home-a'" >
+      <mat-icon class="mat-icon-ucar" svgIcon="Urcarlogo" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon>
+      <span>URCAR</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button [routerLink]="'/lessors/home-a'" >Inicio</a>
+      <a mat-button [routerLink]="'/lessors/profile-a'" >Perfil</a>
+      <a mat-button [routerLink]="'/lessors/reservations-a'" >Lista Reservas</a>
+      <a mat-button [routerLink]="'/lessors/message-a'" >Mensajes</a>
+      <a mat-button [routerLink]="'/lessors/cars'" >Vehiculos</a>
+      <a mat-button [routerLink]="'/lessors/configuration-a'" >configuración</a>
+    </div>
+  </mat-toolbar>
+  <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+    <div fxLayout="column">
+      <a mat-button [routerLink]="'/lessors/home-a'" >Inicio</a>
+      <a mat-button [routerLink]="'/lessors/profile-a'" >Perfil</a>
+      <a mat-button [routerLink]="'/lessors/reservations-a'" >Lista Reservas</a>
+      <a mat-button [routerLink]="'/lessors/message-a'" >Mensajes</a>
+      <a mat-button [routerLink]="'/lessors/cars'" >Vehiculos</a>
+      <a mat-button [routerLink]="'/lessors/configuration-a'" >configuración</a>
+    </div>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+
+
+
+
