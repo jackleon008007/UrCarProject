@@ -3,100 +3,144 @@
     {
       "id": 1,
       "name": "Jack",
+      "lastName": "Leon",
+      "DNI": 2135646465,
       "age": 30,
       "address": "Unknown",
       "type": "Ar",
-      "password": "123"
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     },
     {
       "id": 2,
       "name": "Roberto",
+      "lastName": "Leon",
+      "DNI": 2135645565,
       "age": 30,
       "address": "Unknown",
       "type": "Ar",
-      "password": "123"
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Sebastian",
+      "lastName": "Leon",
+      "DNI": 2135645465,
       "age": 30,
       "address": "Unknown",
       "type": "Ar",
-      "password": "123"
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     }
   ],
   "arrendatarios": [
     {
       "id": 1,
       "name": "Manuel Asencio",
+      "lastName": "Leon",
+      "DNI": 2135648515,
       "age": 30,
       "address": "Unknown",
-      "type": "A",
-      "password": "123"
+      "type": "Ar",
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     },
     {
       "id": 2,
       "name": "Marcos",
-      "age": 31,
-      "address": "raaa",
-      "type": "A",
-      "password": "123"
+      "lastName": "Leon",
+      "DNI": 2135646865,
+      "age": 30,
+      "address": "Unknown",
+      "type": "Ar",
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     },
     {
       "id": 3,
       "name": "Marcela",
-      "age": 15,
-      "address": "alla",
-      "type": "A",
-      "password": "123"
+      "lastName": "Leon",
+      "DNI": 213564648751,
+      "age": 30,
+      "address": "Unknown",
+      "type": "Ar",
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     },
     {
       "id": 4,
       "name": "Maria",
-      "age": 40,
-      "address": "fue man",
-      "type": "A",
-      "password": "123"
-    }
-  ],
-  "Skills": [
-    {
-      "id": 1,
-      "name": "Backend Developer"
-    },
-    {
-      "id": 2,
-      "name": "Frontend Developer"
-    },
-    {
-      "id": 3,
-      "name": "Mobile Developer"
-    },
-    {
-      "id": 4,
-      "name": "Game Developer"
-    }
-  ],
-  "competences": [
-    {
-      "id": 1,
-      "arrendatarioId": 1,
-      "skillId": 1
-    },
-    {
-      "id": 2,
-      "arrendatarioId": 2,
-      "skillId": 2
-    },
-    {
-      "id": 3,
-      "arrendatarioId": 3,
-      "skillId": 3
-    },
-    {
-      "id": 4,
-      "arrendatarioId": 4,
-      "skillId": 4
+      "lastName": "Leon",
+      "DNI": 21356465413,
+      "age": 30,
+      "address": "Unknown",
+      "type": "Ar",
+      "password": "123",
+      "imageProfile": "direccion.de imagen",
+      "numberPhone": 123456789,
+      "email": "ejack@outlook.es",
+      "licensePlate": "156WDI",
+      "district": "San borja",
+      "postalCode": 123000,
+      "experience": "senior",
+      "recomends": "be better",
+      "Driverlicense": 213133513,
+      "PayMethods": "cash"
     }
   ],
   "cars_x": [
@@ -105,56 +149,105 @@
       "image": "assets/cars/car1.png",
       "title": "Onix-Sedán",
       "price": 100,
+      "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 49
+      "likes": 50,
+      "idOwner": 3,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     },
     {
       "id": 2,
       "image": "assets/cars/car2.png",
       "title": "Onix-Sedán",
       "price": 100,
+      "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 7
+      "likes": 8,
+      "idOwner": 3,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     },
     {
       "id": 3,
       "image": "assets/cars/car3.png",
       "title": "Onix-Sedán",
       "price": 100,
+      "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 0
+      "likes": 0,
+      "idOwner": 3,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     },
     {
       "id": 4,
       "image": "assets/cars/car4.png",
       "title": "onix-sedan",
       "price": 100,
+      "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 4
+      "likes": 4,
+      "idOwner": 4,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     },
     {
       "id": 5,
       "image": "assets/cars/car5.png",
       "title": "Onix-Sedán",
       "price": 100,
+      "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 3
+      "likes": 3,
+      "idOwner": 3,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     },
     {
       "id": 6,
       "image": "assets/cars/car6.png",
       "title": "Onix-Sedán",
       "price": 100,
+      "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 0
+      "likes": 0,
+      "idOwner": 2,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     },
     {
       "id": 7,
       "image": "../assets/cars/car8.png",
       "title": "NUEVO AU",
       "price": 600,
+      "fabricationYear": 2002,
       "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda",
-      "likes": 0
+      "likes": 0,
+      "idOwner": 1,
+      "modelCar": "aasda54da",
+      "numberSeats": 4,
+      "numberDoors": 4,
+      "bootType": "automatically",
+      "plate": "adadQEQE"
     }
   ],
   "reserva": [
@@ -193,36 +286,6 @@
       "price": 100,
       "idCar": 3,
       "id": 7
-    },
-    {
-      "title": "Onix-Sedán",
-      "price": 100,
-      "idCar": 1,
-      "id": 8
-    },
-    {
-      "title": "Onix-Sedán",
-      "price": 100,
-      "idCar": 2,
-      "id": 9
-    },
-    {
-      "title": "Onix-Sedán",
-      "price": 100,
-      "idCar": 1,
-      "id": 10
-    },
-    {
-      "title": "onix-sedan",
-      "price": 100,
-      "idCar": 4,
-      "id": 11
-    },
-    {
-      "title": "Onix-Sedán",
-      "price": 100,
-      "idCar": 1,
-      "id": 12
     }
   ]
 }

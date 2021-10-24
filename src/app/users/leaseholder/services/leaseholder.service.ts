@@ -14,6 +14,13 @@ export class LeaseholderService {
   basePath='http://localhost:3000/api/v1/arrendatarios'
 
 
+
+
+  //leaseholder data User Current
+
+
+
+
   httpOptions={
     headers: new HttpHeaders({
       'Content-Type':'application/json'
