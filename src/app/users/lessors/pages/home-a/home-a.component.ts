@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {LessorsService} from "../../services/lessors.service";
 
 @Component({
@@ -6,13 +6,19 @@ import {LessorsService} from "../../services/lessors.service";
   templateUrl: './home-a.component.html',
   styleUrls: ['./home-a.component.css']
 })
-export class HomeAComponent implements OnInit {
+export class HomeAComponent implements OnInit,AfterViewInit {
 
   nombre="";
-  constructor(private lessorS:LessorsService) { }
+  constructor(private lessorS:LessorsService) {
+    this.nombre=this.lessorS.CurrentdataLessor.name;
+  }
 
   ngOnInit(): void {
     this.nombre=this.lessorS.CurrentdataLessor.name;
   }
+  ngAfterViewInit() {
+    this.nombre=this.lessorS.CurrentdataLessor.name;
+  }
+
 
 }
