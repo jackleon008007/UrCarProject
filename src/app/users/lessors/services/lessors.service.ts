@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {Lessor} from "../model/lessor";
 import {catchError, retry} from "rxjs/operators";
+import {LessorsComponent} from "../pages/lessors/lessors.component";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,9 @@ export class LessorsService {
   //carros points
   basePath='http://localhost:3000/api/v1/arrendadores'
 
+//data current lessor
 
+  CurrentdataLessor:Lessor;
   httpOptions={
     headers: new HttpHeaders({
       'Content-Type':'application/json'
@@ -19,7 +22,9 @@ export class LessorsService {
   }
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.CurrentdataLessor={} as Lessor;
+  }
 
   handleError(error: HttpErrorResponse){
     if (error.error instanceof ErrorEvent){

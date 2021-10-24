@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LessorsService} from "../../services/lessors.service";
 
 @Component({
   selector: 'app-home-a',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeAComponent implements OnInit {
 
-  constructor() { }
+  nombre="";
+  constructor(private lessorS:LessorsService) { }
 
   ngOnInit(): void {
+    this.nombre=this.lessorS.CurrentdataLessor.name;
   }
 
 }

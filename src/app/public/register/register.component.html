@@ -1,46 +1,59 @@
 
 
-
-
-
 <section class="section-register">
-  <div class="container-card">
-    <p>
-      <mat-form-field appearance="legacy">
-        <mat-label> Registro de nombre</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="standard">
-        <mat-label>Usuario</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
-    <button mat-stroked-button color="accent" class="btn-block" [routerLink]="'/login'">Create</button>
 
+  <form [formGroup]="signupForm" class="container-card" (ngSubmit)="signUp()">
+    <mat-radio-group [(ngModel)]="typeOfUser">
+      <br>
+      <mat-radio-button class="point-choose" value="Small">
+        Arrendador
+      </mat-radio-button>
+      <mat-radio-button class="point-choose" value="Medium">
+        Arrendatario
+      </mat-radio-button>
+    </mat-radio-group>
+    <br><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input formControlName="name" matInput placeholder="Name">
+        <mat-hint>completar su nombre</mat-hint>
+      </mat-form-field>
+    <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Apellidos</mat-label>
+        <input formControlName="lastName" matInput placeholder="ambos apellidos">
+        <mat-hint>Completar apellidos</mat-hint>
+      </mat-form-field>
+    <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Edad</mat-label>
+        <input formControlName="years" matInput placeholder="mayor de 18">
+        <mat-hint>Completar edad</mat-hint>
+      </mat-form-field>
+    <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="example@outlook.es">
+        <mat-hint>complete su Email</mat-hint>
+      </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Numero</mat-label>
+      <input formControlName="phone" matInput placeholder="nueve digitos">
+      <mat-hint>Numero de telefono/celular</mat-hint>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input formControlName="password" matInput placeholder="combinacion numero y letras">
+      <mat-hint>Coloque una contraseña</mat-hint>
+    </mat-form-field>
+    <br>
+    <button mat-stroked-button color="accent" class="btn-block" [routerLink]="'/login'">Create</button>
     <button mat-stroked-button color="accent" class="btn-block" [routerLink]="'/login'">Cancel</button>
-  </div>
+    <br>
+
+  </form>
 
 
 </section>

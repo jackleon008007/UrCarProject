@@ -1,14 +1,14 @@
 .container-card{
   background-color: white;
   width:400px;
-  height:400px;
+  height:90%;
   margin:auto;
-  padding:3vw;
-
+  padding:2vw;
 }
 .container-card mat-form-field{
   margin:auto;
   width:100%;
+  margin-top: 5px;
 }
 
 .section-register{
@@ -16,5 +16,5 @@
   height: 100%;
   background-color: aquamarine;
   display:block;
-  padding-top: 5vw;
+  padding-top: 1vw;
 }

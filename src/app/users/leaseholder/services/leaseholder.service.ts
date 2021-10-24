@@ -18,6 +18,8 @@ export class LeaseholderService {
 
   //leaseholder data User Current
 
+  CurrentLeaseHolder: Leaseholder;
+
 
 
 
@@ -28,7 +30,9 @@ export class LeaseholderService {
   }
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.CurrentLeaseHolder={} as Leaseholder;
+  }
 
   handleError(error: HttpErrorResponse){
     if (error.error instanceof ErrorEvent){
