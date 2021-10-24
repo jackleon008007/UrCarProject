@@ -52,6 +52,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { ChatComponent } from './component/chat/chat.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { PostDetailsComponent } from './component/post-details/post-details.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 
 
@@ -113,7 +114,7 @@ import { PostDetailsComponent } from './component/post-details/post-details.comp
     MatSelectModule,
     LayoutModule,
     MatSidenavModule,
-    FlexLayoutModule
+    FlexLayoutModule, MatGridListModule
 
 
   ],
