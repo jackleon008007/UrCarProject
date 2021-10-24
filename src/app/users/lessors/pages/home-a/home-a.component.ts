@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {LessorsService} from "../../services/lessors.service";
+import {Lessor} from "../../model/lessor";
 
 @Component({
   selector: 'app-home-a',
@@ -8,13 +9,15 @@ import {LessorsService} from "../../services/lessors.service";
 })
 export class HomeAComponent implements OnInit,AfterViewInit {
 
-  nombre="";
+  nombre="01";
+  CurrentUserLessor:Lessor;
   constructor(private lessorS:LessorsService) {
-    this.nombre=this.lessorS.CurrentdataLessor.name;
+    this.CurrentUserLessor={}  as Lessor;
   }
 
   ngOnInit(): void {
     this.nombre=this.lessorS.CurrentdataLessor.name;
+    this.CurrentUserLessor=this.lessorS.CurrentdataLessor;
   }
   ngAfterViewInit() {
     this.nombre=this.lessorS.CurrentdataLessor.name;
