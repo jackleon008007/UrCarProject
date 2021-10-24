@@ -1,7 +1,27 @@
-<li>{{dataId}}</li>
-<mat-card>
-  <mat-card-header>{{DataCar.title}}----- {{DataCar.id}} --- {{DataCar.likes}}</mat-card-header>
+
+<mat-card class="car1">
+  <mat-card-header>{{DataCar.title}}</mat-card-header>
   <img mat-card-image class="car" [src]="DataCar.image " alt="Photo of a Shiba Inu">
-  <mat-card-content>{{DataCar.price}}</mat-card-content>
 </mat-card>
+
+
+<mat-list class="list">
+  <mat-list-item>
+    <h3>Marca:      {{DataCar.title}}</h3>
+  </mat-list-item>
+
+  <mat-list-item>
+    <h3>Price: {{DataCar.price}}</h3>
+  </mat-list-item>
+
+  <mat-list-item>
+    <h3>Numero de likes: {{DataCar.likes}}</h3>
+  </mat-list-item>
+
+  <mat-list-item>
+    <h3>Descripción: {{DataCar.description}}</h3>
+  </mat-list-item>
+
+</mat-list>
+
 
