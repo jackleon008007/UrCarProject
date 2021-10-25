@@ -1,20 +1,37 @@
-<p>{{nombre}}</p>
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h2>{{CurrentUserLessor.name}}</h2>
+      <h4>{{CurrentUserLessor.email}}</h4>
+    </div>
+    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+  </div>
 
-<p>nombre: {{CurrentUserLessor.name}}</p>
-<p>direccion: {{CurrentUserLessor.address}}</p>
-<p>edad: {{CurrentUserLessor.age}}</p>
-<p>distrito: {{CurrentUserLessor.district}}</p>
-<p> DNI :{{CurrentUserLessor.DNI}}</p>
-<p> licensia{{CurrentUserLessor.Driverlicense}}</p>
-<p> email: {{CurrentUserLessor.email}}</p>
-<p>experiencia: {{CurrentUserLessor.experience}}</p>
-<p>{{CurrentUserLessor.id}}</p>
-<p>{{CurrentUserLessor.imageProfile}}</p>
-<p>{{CurrentUserLessor.lastName}}</p>
-<p>{{CurrentUserLessor.licensePlate}}</p>
-<p>{{CurrentUserLessor.numberPhone}}</p>
-<p>{{CurrentUserLessor.PayMethods}}</p>
-<p>{{CurrentUserLessor.postalCode}}</p>
-<p>{{CurrentUserLessor.recomends}}</p>
-<p>{{CurrentUserLessor.type}}</p>
-<p>{{CurrentUserLessor.password}}</p>
+  <mat-divider></mat-divider>
+
+  <div class="container">
+
+  <h2 matSubheader>Personal information</h2>
+
+  <a mat-list-item>Dni: {{CurrentUserLessor.DNI}}</a>
+  <a mat-list-item>Age: {{CurrentUserLessor.age}}</a>
+  <a mat-list-item>Driver license: {{CurrentUserLessor.Driverlicense}}</a>
+  <a mat-list-item>Recomends: {{CurrentUserLessor.recomends}}</a>
+  <a mat-list-item>Number Phone: {{CurrentUserLessor.numberPhone}}</a>
+  <a mat-list-item>Password: {{CurrentUserLessor.password}}</a>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader>Tools</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon>import_contacts</mat-icon>
+    Contacts
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <mat-icon>contact_phone</mat-icon>
+    Leads
+  </a>
+  </div>
+</mat-nav-list>
