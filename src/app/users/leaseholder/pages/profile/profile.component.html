@@ -1,20 +1,37 @@
-<p>{{nombre}}</p>
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h2>{{CurrentUserLeaseholder.name}}</h2>
+      <h4>{{CurrentUserLeaseholder.email}}</h4>
+    </div>
+    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+  </div>
 
-<p>nombre: {{CurrentUserLeaseholder.name}}</p>
-<p>direccion: {{CurrentUserLeaseholder.address}}</p>
-<p>edad: {{CurrentUserLeaseholder.age}}</p>
-<p>distrito: {{CurrentUserLeaseholder.district}}</p>
-<p> DNI :{{CurrentUserLeaseholder.DNI}}</p>
-<p> licensia{{CurrentUserLeaseholder.Driverlicense}}</p>
-<p> email: {{CurrentUserLeaseholder.email}}</p>
-<p>experiencia: {{CurrentUserLeaseholder.experience}}</p>
-<p>{{CurrentUserLeaseholder.id}}</p>
-<p>{{CurrentUserLeaseholder.imageProfile}}</p>
-<p>{{CurrentUserLeaseholder.lastName}}</p>
-<p>{{CurrentUserLeaseholder.licensePlate}}</p>
-<p>{{CurrentUserLeaseholder.numberPhone}}</p>
-<p>{{CurrentUserLeaseholder.PayMethods}}</p>
-<p>{{CurrentUserLeaseholder.postalCode}}</p>
-<p>{{CurrentUserLeaseholder.recomends}}</p>
-<p>{{CurrentUserLeaseholder.type}}</p>
-<p>{{CurrentUserLeaseholder.password}}</p>
+  <mat-divider></mat-divider>
+
+  <div class="container">
+
+    <h2 matSubheader>Personal information</h2>
+
+    <a mat-list-item>Dni: {{CurrentUserLeaseholder.DNI}}</a>
+    <a mat-list-item>Age: {{CurrentUserLeaseholder.age}}</a>
+    <a mat-list-item>Driver license: {{CurrentUserLeaseholder.Driverlicense}}</a>
+    <a mat-list-item>Recomends: {{CurrentUserLeaseholder.recomends}}</a>
+    <a mat-list-item>Number Phone: {{CurrentUserLeaseholder.numberPhone}}</a>
+    <a mat-list-item>Password: {{CurrentUserLeaseholder.password}}</a>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+      <mat-icon>import_contacts</mat-icon>
+      Contacts
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+      <mat-icon>contact_phone</mat-icon>
+      Leads
+    </a>
+  </div>
+</mat-nav-list>
