@@ -21,6 +21,7 @@ import {ConfigurationAComponent} from "./users/lessors/pages/configuration-a/con
 import { CarFormComponent}   from './users/lessors/pages/car-form/car-form.component';
 import { ChatComponent } from './component/chat/chat.component'
 import {PostDetailsComponent} from "./component/post-details/post-details.component";
+import {CreatingPostComponent} from "./users/lessors/pages/creating-post/creating-post.component";
 
 const routes: Routes = [
 
@@ -43,6 +44,7 @@ const routes: Routes = [
       {path: 'reservations-a', component: ReservationsAComponent},
       {path: 'politic-and-privacy-a', component: PoliticAndPrivacyAComponent},
       {path: 'create', component:CarFormComponent},
+      {path:'post-create',component:CreatingPostComponent },
       {path: 'chat', component:ChatComponent}
     ]
   },

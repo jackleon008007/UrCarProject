@@ -248,6 +248,43 @@
       "numberDoors": 4,
       "bootType": "automatically",
       "plate": "adadQEQE"
+    },
+    {
+      "id": 8,
+      "image": "../assets/cars/car8.png",
+      "title": "NUEVO AU",
+      "price": 600,
+      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda"
+    },
+    {
+      "id": 9,
+      "image": "../assets/cars/car8.png",
+      "title": "eja@outlook.es",
+      "price": "123",
+      "description": "fhchfjgjb",
+      "likes": 0,
+      "fabricationYear": "2002",
+      "idOwner": 3,
+      "modelCar": "honda civic",
+      "numberSeats": "4",
+      "numberDoors": "4",
+      "bootType": "jhbhjb",
+      "plate": "GFDG"
+    },
+    {
+      "id": 10,
+      "image": "../assets/cars/car8.png",
+      "title": "ALELUYA",
+      "price": "15132",
+      "description": "HONDA CIVIC 2633-SERIAL",
+      "likes": 0,
+      "fabricationYear": "2002-29-4",
+      "idOwner": 3,
+      "modelCar": "HONDA  CIVIC",
+      "numberSeats": "4",
+      "numberDoors": "4",
+      "bootType": "jlmñl",
+      "plate": "ASGAG-132-AS"
     }
   ],
   "reserva": [

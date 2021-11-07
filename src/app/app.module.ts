@@ -53,6 +53,7 @@ import { ChatComponent } from './component/chat/chat.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { PostDetailsComponent } from './component/post-details/post-details.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import { CreatingPostComponent } from './users/lessors/pages/creating-post/creating-post.component';
 
 
 
@@ -85,6 +86,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
     NavComponent,
     ChatComponent,
     PostDetailsComponent,
+    CreatingPostComponent,
 
 
 
