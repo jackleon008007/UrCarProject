@@ -8,7 +8,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import { MatPaginator } from '@angular/material/paginator';
 import { NgForm } from '@angular/forms';
 import { MatSort } from '@angular/material/sort';
-
+import {LessorsService} from "../../services/lessors.service";
 import { Params } from '@angular/router';
 
 @Component({
@@ -31,7 +31,7 @@ export class CarsComponent implements OnInit {
   @ViewChild( MatSort)
   sort!: MatSort;
 
-  constructor(private carService: CarsService) {
+  constructor(private carService: CarsService, private lessorServ:LessorsService) {
     this.dataList = {} as Car[];
 
     this.dataSource= new MatTableDataSource<any>();
@@ -39,9 +39,11 @@ export class CarsComponent implements OnInit {
   }
 
   getAllCars(){
-    this.carService.getAll().subscribe((response: any)=>{
+    this.carService.getAllByUser(this.lessorServ.CurrentdataLessor.id).subscribe((response: any)=>{
       this.dataList = response;
-      this.dataSource= response;
+    })
+    this.carService.getAll().subscribe((response: any)=>{
+      this.dataSource = response;
     })
   }
   addCar(i:number){
