@@ -5,4 +5,12 @@ export interface Car{
   price: number;
   description: string;
   likes:number;
+
+  fabricationYear: string;
+  idOwner: number;
+  modelCar: string;
+  numberSeats: number;
+  numberDoors: number;
+  bootType: string;
+  plate: string;
 }

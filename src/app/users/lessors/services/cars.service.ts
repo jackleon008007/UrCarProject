@@ -51,6 +51,10 @@ export class CarsService {
     return this.http.get<Car>(this.basePath,this.httpOptions)
       .pipe(retry(2),catchError(this.handleError))
   }
+  getAllByUser(userid:any):Observable<Car>{
+    return this.http.get<Car>(`${this.basePath}?idOwner=${userid}`,this.httpOptions)
+      .pipe(retry(2),catchError(this.handleError))
+  }
 
   update(id:any, item: any): Observable<Car>{
     return this.http.put<Car>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)

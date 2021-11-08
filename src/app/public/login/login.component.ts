@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   typeUserClient="";
   dataUserLessor:Lessor;
   dataUserLeaseholder:Leaseholder;
+
   constructor(private formBuilder:FormBuilder, private http: HttpClient,
               private router:Router, private lessorsS:LessorsService,
               private leaseholderS:LeaseholderService) {
