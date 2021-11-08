@@ -166,7 +166,7 @@
       "price": 100,
       "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 19,
+      "likes": 20,
       "idOwner": 3,
       "modelCar": "aasda54da",
       "numberSeats": 4,
@@ -233,21 +233,6 @@
       "numberDoors": 4,
       "bootType": "automatically",
       "plate": "adadQEQE"
-    },
-    {
-      "id": 7,
-      "image": "../assets/cars/car8.png",
-      "title": "NUEVO AU",
-      "price": 600,
-      "fabricationYear": 2002,
-      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda",
-      "likes": 1,
-      "idOwner": 1,
-      "modelCar": "aasda54da",
-      "numberSeats": 4,
-      "numberDoors": 4,
-      "bootType": "automatically",
-      "plate": "adadQEQE"
     }
   ],
   "reserva": [
@@ -286,6 +271,24 @@
       "price": 100,
       "idCar": 3,
       "id": 7
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 8
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 2,
+      "id": 9
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 10
     }
   ]
 }

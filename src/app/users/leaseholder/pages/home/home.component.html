@@ -1,53 +1,6 @@
 <section class="section-cards">
   <div class="bar-left">
-    <mat-card class="filter-card">
-      <mat-card-content>
-        <h2 class="title-h2">Filtro de Caracteristicas</h2>
-        <br><br>
 
-        <section class="point-section">
-          <label class="example-margin">Tamaño:</label>
-          <mat-radio-group [(ngModel)]="color">
-            <br>
-            <mat-radio-button class="point-choose" value="Small">
-              Pequeño
-            </mat-radio-button>
-            <mat-radio-button class="point-choose" value="Medium">
-              Mediano
-            </mat-radio-button>
-            <mat-radio-button class="point-choose" value="Big">
-              Grande
-            </mat-radio-button>
-          </mat-radio-group>
-        </section>
-
-        <br><br><br>
-        <section class="section-checkbox">
-          <mat-checkbox class="checkbox-card" [(ngModel)]="barato">Barato</mat-checkbox>
-        </section>
-        <br>
-        <section class="section-checkbox">
-          <mat-checkbox class="checkbox-card" [(ngModel)]="estandar">Estandar</mat-checkbox>
-        </section>
-        <br>
-        <section class="section-checkbox">
-          <mat-checkbox class="checkbox-card" [(ngModel)]="lujoso">Lujoso</mat-checkbox>
-        </section>
-        <br><br><br>
-        <section class="section-checkbox">
-          <mat-checkbox class="checkbox-card" [(ngModel)]="Cerca">Cerca</mat-checkbox>
-        </section>
-        <br>
-        <section class="section-checkbox">
-          <mat-checkbox class="checkbox-card" [(ngModel)]="opcion1">Checked</mat-checkbox>
-        </section>
-        <br>
-        <section class="section-checkbox">
-          <mat-checkbox class="checkbox-card" [(ngModel)]="opcion2">Disabled</mat-checkbox>
-        </section>
-
-      </mat-card-content>
-    </mat-card>
   </div>
 
 
@@ -62,14 +15,12 @@
         </mat-card-header>
         <img mat-card-image [src]="element.image" alt="Photo of a Shiba Inu">
         <mat-card-content>
-          <p>Precio:
-            {{element.price}}
-          </p>
+
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button (click)="navigateToPostDetails(element.id)">Ver mas...</button>
-          <button mat-button color="primary" (click)="Addlike(element.id)">Me Gusta {{element.likes}}</button>
-          <button mat-button color="warn">Compartir</button>
+          <button mat-button (click)="navigateToPostDetails(element.id)">Ver mas</button>
+          <button mat-button  (click)="Addlike(element.id)">Me Gusta {{element.likes}}</button>
+          <button mat-button>Compartir</button>
           <button mat-button class="btn-reserv" (click)="addNewReserve(element.id,element.title,element.price)">Reservar</button>
         </mat-card-actions>
 
