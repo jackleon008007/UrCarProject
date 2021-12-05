@@ -166,7 +166,7 @@
       "price": 100,
       "fabricationYear": 2002,
       "description": "Lorem ipsum dolor sit amet. ",
-      "likes": 19,
+      "likes": 22,
       "idOwner": 3,
       "modelCar": "aasda54da",
       "numberSeats": 4,
@@ -237,66 +237,41 @@
     {
       "id": 7,
       "image": "../assets/cars/car8.png",
-      "title": "NUEVO AU",
-      "price": 600,
-      "fabricationYear": 2002,
-      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda",
-      "likes": 1,
-      "idOwner": 1,
-      "modelCar": "aasda54da",
-      "numberSeats": 4,
-      "numberDoors": 4,
-      "bootType": "automatically",
-      "plate": "adadQEQE"
+      "title": "dasbhdasd",
+      "price": "fasfa",
+      "description": "afssffs",
+      "likes": 0,
+      "fabricationYear": "",
+      "modelCar": "",
+      "numberSeats": "",
+      "numberDoors": "",
+      "bootType": "",
+      "plate": ""
     },
     {
       "id": 8,
       "image": "../assets/cars/car8.png",
-      "title": "NUEVO AU",
-      "price": 600,
-      "description": "mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda"
+      "title": "dasbhdasd",
+      "price": "fasfa",
+      "description": "afssffs",
+      "likes": 0,
+      "fabricationYear": "",
+      "modelCar": "",
+      "numberSeats": "",
+      "numberDoors": "",
+      "bootType": "",
+      "plate": ""
     },
     {
       "id": 9,
       "image": "../assets/cars/car8.png",
-      "title": "eja@outlook.es",
-      "price": "123",
-      "description": "fhchfjgjb",
+      "title": "asf",
+      "price": "fafs",
+      "description": "fas",
       "likes": 0,
-      "fabricationYear": "2002",
-      "idOwner": 3,
-      "modelCar": "honda civic",
-      "numberSeats": "4",
-      "numberDoors": "4",
-      "bootType": "jhbhjb",
-      "plate": "GFDG"
-    },
-    {
-      "id": 10,
-      "image": "../assets/cars/car8.png",
-      "title": "ALELUYA",
-      "price": "15132",
-      "description": "HONDA CIVIC 2633-SERIAL",
-      "likes": 0,
-      "fabricationYear": "2002-29-4",
-      "idOwner": 3,
-      "modelCar": "HONDA  CIVIC",
-      "numberSeats": "4",
-      "numberDoors": "4",
-      "bootType": "jlmñl",
-      "plate": "ASGAG-132-AS"
-    },
-    {
-      "id": 11,
-      "image": "../assets/cars/car8.png",
-      "title": "maria@outlook.es",
-      "price": "123",
-      "description": "honda civic",
-      "likes": 0,
-      "fabricationYear": "2002",
-      "idOwner": 2,
-      "modelCar": "DFGF",
-      "numberSeats": "4",
+      "fabricationYear": "fas",
+      "modelCar": "",
+      "numberSeats": "",
       "numberDoors": "",
       "bootType": "",
       "plate": ""
@@ -338,6 +313,42 @@
       "price": 100,
       "idCar": 3,
       "id": 7
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 8
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 2,
+      "id": 9
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 10
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 1,
+      "id": 11
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 2,
+      "id": 13
+    },
+    {
+      "title": "Onix-Sedán",
+      "price": 100,
+      "idCar": 3,
+      "id": 14
     }
   ],
   "mensaje": [

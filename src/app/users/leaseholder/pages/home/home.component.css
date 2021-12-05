@@ -5,41 +5,37 @@
   height:100%;
 }
 
-
 .bar-right{
   width:22vw;
   height: 100%;
-  background-color: white;
 
+
+}
+.mat-card-title{
+  color: white;
 }
 .bar-left{
   width:23vw;
   height:100%;
-  background-color: white;
+
 }
 
 .section-cards div{
+  margin-left: 350px;
   display: inline-block;
   float:left;
   height:100%;
 
 }
 .Posts-card{
-  height: 800px;
+  height: 650px;
   width: 800px;
-  margin-left: 600px;
- border-radius: 10px;
-  background-color: #ffffff;
-
+ border-radius: 2px;
+  background-color: #383737;
+  margin-top: 15px;
 }
 
 
-.filter-card{
-  max-height:100%;
-  background-color: transparent;
-  position: fixed;
-  width:20vw;
-}
 .result{
   background-color: transparent;
   position: fixed
@@ -59,8 +55,9 @@
 
 .btn-reserv{
   float:right;
-  color: blueviolet;
+  color: rgb(0, 0, 0);
   position:initial;
+  animation-delay: initial;
 }
 
 .Posts-card button{
@@ -68,7 +65,7 @@
 }
 .Posts-card button:hover{
   position:initial;
-  background-color: lightblue;
+  background-color: #e35154;
 }
 
 img{
@@ -77,5 +74,5 @@ img{
 }
 
 button{
-  background-color: #b8d5e0;
+  background-color: #ffffff;
 }
