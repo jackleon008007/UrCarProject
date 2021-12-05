@@ -339,5 +339,15 @@
       "idCar": 3,
       "id": 7
     }
+  ],
+  "mensaje": [
+    {
+      "id":"1",
+      "idLessor": "1",
+      "idLeaseHolder": "1",
+      "text": "vamos",
+      "creationdate": "2021-11-05"
+    }
+
   ]
 }

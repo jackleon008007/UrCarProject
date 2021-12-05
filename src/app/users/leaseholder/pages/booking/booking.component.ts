@@ -4,16 +4,11 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 
-import {FormGroup, FormControl} from '@angular/forms';
-
-import { NgForm } from '@angular/forms';
-import {MatList, MatListItem} from "@angular/material/list";
-import {MatCard} from "@angular/material/card";
-import {newArray} from "@angular/compiler/src/util";
 import {ReservationService} from "../../services/reservation.service";
 import {Reservation} from "../../model/reservation";
-import {MatIcon} from "@angular/material/icon";
-import {HomeComponent} from "../home/home.component";
+import {LessorsService} from "../../../lessors/services/lessors.service";
+import {LeaseholderService} from "../../services/leaseholder.service";
+import {StorageService} from "../../../../services/storage.service";
 
 
 @Component({
@@ -37,16 +32,24 @@ export class BookingComponent implements OnInit,AfterViewInit {
   @ViewChild( MatSort)
   sort!: MatSort;
 
+  CurrentUserId:string;
 
-  constructor(private reservaService: ReservationService) {
+
+  constructor(private reservaService: ReservationService, private leaseholderserv:LeaseholderService,
+              private storageser:StorageService) {
     this.reservaData= {} as Reservation;
     this.dataSource1= new MatTableDataSource<any>();
+    this.CurrentUserId="";
   }
 
 
+  obtenerCurrentLessor(){
+    this.CurrentUserId=this.storageser.getLh("leaseH")
+  }
   getAllReservs(){
-    this.reservaService.getAll().subscribe((response: any)=>{
-      this.dataSource1.data=response;
+    this.obtenerCurrentLessor();
+    this.reservaService.getAllByLeaseHolder(this.CurrentUserId).subscribe((response: any)=>{
+      this.dataSource1.data=response.content;
     });
   }
 
@@ -59,15 +62,9 @@ export class BookingComponent implements OnInit,AfterViewInit {
     this.dataSource1.sort = this.sort;
   }
 
-  addReserv(){
-    this.reservaData.id = 0;
-    this.reservaService.create(this.reservaData).subscribe((response: any) =>{
-      this.dataSource1.data.push({...response });
-      this.dataSource1.data = this.dataSource1.data.map((o: any) => {return o;});
-    });
-  }
-  deleteItem(id: number){
-    this.reservaService.delete(id).subscribe(()=>{
+
+  deleteItem(id: number, idpost:number){
+    this.reservaService.delete(id,idpost).subscribe(()=>{
       this.dataSource1.data = this.dataSource1.data.filter((o: Reservation)=>{
         return o.id!==id ? o: false;
       });

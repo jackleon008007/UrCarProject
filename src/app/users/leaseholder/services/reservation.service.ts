@@ -11,8 +11,14 @@ import{HomeComponent} from "../pages/home/home.component";
 export class ReservationService {
 
   //leaseholder points
-  basePath='http://localhost:3000/reserva'
+  //basePathlessor='https://appurcargroup.herokuapp.com/api/v1/lessor/'
+  //basePathleasehoolder='https://appurcargroup.herokuapp.com/api/v1/leaseHolder/'
+  //basePathreservation='https://appurcargroup.herokuapp.com/api/v1/post/'
 
+
+  basePathlessor='https://appurcargroup.herokuapp.com/api/v1/lessor'
+  basePathleasehoolder='https://appurcargroup.herokuapp.com/api/v1/leaseHolder'
+  basePathreservation='https://appurcargroup.herokuapp.com/api/v1/post'
 
   httpOptions={
     headers: new HttpHeaders({
@@ -37,27 +43,32 @@ export class ReservationService {
 
   //para arrendat
 
-  create(item:any):Observable<Reservation>{
-    return this.http.post<Reservation>(this.basePath,JSON.stringify(item),this.httpOptions)
+  create(item:any, idpost:number):Observable<Reservation>{
+    return this.http.post<Reservation>(`${this.basePathreservation}/${idpost}/reservation`,JSON.stringify(item),this.httpOptions)
       .pipe(retry(2),catchError(this.handleError));
 
   }
 
-  getById(id:any):Observable<Reservation>{
-    return this.http.get<Reservation>(`${this.basePath}/${id}`,this.httpOptions)
+
+  //getById(id:any):Observable<Reservation>{
+  //  return this.http.get<Reservation>(`${this.basePath}/${id}`,this.httpOptions)
+  //    .pipe(retry(2),catchError(this.handleError))
+ // }
+  getAllByLessor(id:string):Observable<Reservation>{
+    return this.http.get<Reservation>(`${this.basePathlessor}/${id}/reservation`,this.httpOptions)
       .pipe(retry(2),catchError(this.handleError))
   }
-  getAll():Observable<Reservation>{
-    return this.http.get<Reservation>(this.basePath,this.httpOptions)
+  getAllByLeaseHolder(id:string):Observable<Reservation>{
+    return this.http.get<Reservation>(`${this.basePathleasehoolder}/${id}/reservation`,this.httpOptions)
       .pipe(retry(2),catchError(this.handleError))
   }
 
-  update(id:any, item: any): Observable<Reservation>{
-    return this.http.put<Reservation>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+  update(id:any,idpost:any, item: any): Observable<Reservation>{
+    return this.http.put<Reservation>(`${this.basePathreservation}/${idpost}/reservation/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2),catchError(this.handleError))
   }
-  delete(id:any): Observable<Reservation>{
-    return this.http.delete<Reservation>(`${this.basePath}/${id}`, this.httpOptions)
+  delete(id:any, idpost:any): Observable<Reservation>{
+    return this.http.delete<Reservation>(`${this.basePathreservation}/${idpost}/reservation/${id}`, this.httpOptions)
       .pipe(retry(2),catchError(this.handleError))
   }
 

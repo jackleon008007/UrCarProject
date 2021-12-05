@@ -10,11 +10,12 @@ import {LessorsComponent} from "../pages/lessors/lessors.component";
 })
 export class LessorsService {
   //carros points
-  basePath='http://localhost:3000/api/v1/arrendadores'
+  //basePath='https://appurcargroup.herokuapp.com/api/v1/lessor/'
+  basePath='https://appurcargroup.herokuapp.com/api/v1/lessor'
 
 //data current lessor
 
-  CurrentdataLessor:Lessor;
+  public CurrentdataLessor:Lessor;
   httpOptions={
     headers: new HttpHeaders({
       'Content-Type':'application/json'

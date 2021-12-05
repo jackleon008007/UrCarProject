@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 import { MatSort } from '@angular/material/sort';
 import {LessorsService} from "../../services/lessors.service";
 import { Params } from '@angular/router';
+import {StorageService} from "../../../../services/storage.service";
 
 @Component({
   selector: 'app-cars',
@@ -30,20 +31,25 @@ export class CarsComponent implements OnInit {
   paginator!: MatPaginator;
   @ViewChild( MatSort)
   sort!: MatSort;
-
-  constructor(private carService: CarsService, private lessorServ:LessorsService) {
+  CurrentUserId:string;
+  constructor(private carService: CarsService, private lessorServ:LessorsService,private storageserv:StorageService) {
     this.dataList = {} as Car[];
 
     this.dataSource= new MatTableDataSource<any>();
     this.carData= {} as Car;
-  }
+    this.CurrentUserId=""
 
+  }
+  obtenerCurrentLessor(){
+    this.CurrentUserId=this.storageserv.getLh("lessor")
+  }
   getAllCars(){
-    this.carService.getAllByUser(this.lessorServ.CurrentdataLessor.id).subscribe((response: any)=>{
-      this.dataList = response;
+    this.obtenerCurrentLessor();
+    this.carService.getAllByUser(this.CurrentUserId).subscribe((response: any)=>{
+      this.dataList = response.content;
     })
     this.carService.getAll().subscribe((response: any)=>{
-      this.dataSource = response;
+      this.dataSource = response.content;
     })
   }
   addCar(i:number){
@@ -52,13 +58,13 @@ export class CarsComponent implements OnInit {
     this.carData.title="NUEVO AU";
     this.carData.price=600;
     this.carData.description="mejor auto de l mundo prar rod{pandnajdbsj,dvjav,jcahda";
-    this.carService.create(this.carData).subscribe((response: any) =>{
+    this.carService.create(this.carData, this.lessorServ.CurrentdataLessor.id).subscribe((response: any) =>{
       this.dataSource.data.push({...response });
       this.dataSource.data = this.dataSource.data.map((o: any) => {return o;});
     });
   }
   deleteItem(id: number){
-    this.carService.delete(id).subscribe(()=>{
+    this.carService.delete(id, this.lessorServ.CurrentdataLessor.id).subscribe(()=>{
       this.dataSource.data = this.dataSource.data.filter((o: Car)=>{
         return o.id!==id ? o: false;
       });

@@ -3,6 +3,7 @@ import {LeaseholderService} from "../../services/leaseholder.service";
 import{Leaseholder} from "../../model/leaseholder";
 import {Lessor} from "../../../lessors/model/lessor";
 import {LessorsService} from "../../../lessors/services/lessors.service";
+import {StorageService} from "../../../../services/storage.service";
 
 @Component({
   selector: 'app-profile',
@@ -11,18 +12,33 @@ import {LessorsService} from "../../../lessors/services/lessors.service";
 })
 export class ProfileComponent implements OnInit, AfterViewInit {
 
-  nombre="01";
+
+  CurrentUserId:string;
   CurrentUserLeaseholder:Leaseholder;
-  constructor(private leaseholderS:LeaseholderService) {
+  constructor(private leaseholderS:LeaseholderService, private storageSer:StorageService) {
     this.CurrentUserLeaseholder={}  as Leaseholder;
+    this.CurrentUserId="";
+  }
+  obtenerCurrentLessor(){
+    this.CurrentUserId=this.storageSer.getLh("leaseH")
   }
 
   ngOnInit(): void {
-    this.nombre=this.leaseholderS.CurrentLeaseHolder.name;
-    this.CurrentUserLeaseholder=this.leaseholderS.CurrentLeaseHolder;
+    this.obtenerCurrentLessor()
+    console.log(this.CurrentUserId);
+    this.getbyid(this.CurrentUserId)
   }
   ngAfterViewInit() {
-    this.nombre=this.leaseholderS.CurrentLeaseHolder.name;
+
+  }
+  getbyid(id:any){
+    this.leaseholderS.getById(id).subscribe((response: any)=>{
+      this.CurrentUserLeaseholder=response;
+
+
+      console.log(response.content);
+    });
+
   }
 
 }

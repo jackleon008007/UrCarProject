@@ -11,7 +11,8 @@ import {catchError, retry} from "rxjs/operators";
 export class LeaseholderService {
 
   //leaseholder points
-  basePath='http://localhost:3000/api/v1/arrendatarios'
+  //basePath='https://appurcargroup.herokuapp.com/api/v1/arrendatarios'
+  basePath='https://appurcargroup.herokuapp.com/api/v1/leaseHolder'
 
 
 

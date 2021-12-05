@@ -17,6 +17,7 @@ import {newArray} from "@angular/compiler/src/util";
 import {Reservation} from "../../model/reservation";
 import {Router} from "@angular/router";
 import {PostdetailsService} from "../../../../services/postdetails.service";
+import {StorageService} from "../../../../services/storage.service";
 
 
 @Component({
@@ -36,6 +37,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   opcion1=false;
   opcion2=false;
 
+  weith:string ="";
+
   carData: Car;
 
   @ViewChild( MatPaginator, { static : true })
@@ -43,39 +46,59 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild( MatSort)
   sort!: MatSort;
 
-  dataList: Array<any>
+  dataList: Array<any>;
+  public listCars: any =[];
   reservNew: Reservation;
   reservDataSource: MatTableDataSource<any>;
   DataCarSource:MatTableDataSource<any>;
 
-
+  CurrentUserId:string;
   constructor(private carService: CarsService,private reservService: ReservationService,
-              private router: Router, private postDetails: PostdetailsService ) {
+              private router: Router, private postDetails: PostdetailsService,
+              private leaseholderserv: LeaseholderService,
+              private storageservice:StorageService) {
     this.carData= {} as Car;
     this.dataList= new Array<any>();
     this.reservNew={}as Reservation;
     this.reservDataSource= new MatTableDataSource<any>();
     this.DataCarSource= new MatTableDataSource<any>();
+    this.CurrentUserId="";
   }
-
+  obtenerCurrentLessor(){
+    this.CurrentUserId=this.storageservice.getLh("leaseH")
+  }
 
   getAllCars(){
+    this.obtenerCurrentLessor();
     this.carService.getAll().subscribe((response: any)=>{
-      this.dataList=response;
-      this.DataCarSource=response;
+      this.dataList=response.content;
+      this.listCars=response.content;
+      console.log(this.listCars);
+      console.log(JSON.stringify(response));
+      this.DataCarSource=response.content;
     });
+
+  }
+
+  searchCarPost(title:string){
+
+
   }
   getAllReserv(){
-    this.reservService.getAll().subscribe((response: any)=>{
-      this.reservDataSource=response;
+    this.obtenerCurrentLessor()
+    this.reservService.getAllByLeaseHolder(this.CurrentUserId).subscribe((response: any)=>{
+      this.reservDataSource=response.content;
+      console.log(JSON.stringify(response));
     });
   }
 
-  addNewReserve(id:number,title:string,price:number){
+  addNewReserve(id:number,title:string,price:number, idlessor:number){
     this.reservNew.title=title;
     this.reservNew.price=price;
-    this.reservNew.idCar=id;
-    this.reservService.create(this.reservNew).subscribe((response: any)=>{
+    this.reservNew.lessorId=idlessor;
+    this.reservNew.leaseHolderId=parseInt(this.CurrentUserId);
+    this.reservNew.postId=id;
+    this.reservService.create(this.reservNew,id).subscribe((response: any)=>{
       this.reservDataSource.data.push({...response});
       this.reservDataSource.data = this.reservDataSource.data.map((o: any) => {return o;});
     })

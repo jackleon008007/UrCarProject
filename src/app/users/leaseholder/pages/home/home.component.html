@@ -9,13 +9,13 @@
           <label class="example-margin">Tamaño:</label>
           <mat-radio-group [(ngModel)]="color">
             <br>
-            <mat-radio-button class="point-choose" value="Small">
+            <mat-radio-button class="point-choose" value="small">
               Pequeño
             </mat-radio-button>
-            <mat-radio-button class="point-choose" value="Medium">
+            <mat-radio-button class="point-choose" value="medium">
               Mediano
             </mat-radio-button>
-            <mat-radio-button class="point-choose" value="Big">
+            <mat-radio-button class="point-choose" value="big">
               Grande
             </mat-radio-button>
           </mat-radio-group>
@@ -54,7 +54,7 @@
   <div class="cards-spacer">
 
 
-      <mat-card class="Posts-card" role="list" *ngFor ="let element of dataList; index as i" >
+      <mat-card class="Posts-card" role="list" *ngFor ="let element of listCars; index as i" >
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>{{element.id}}.-{{element.title}}</mat-card-title>
@@ -70,7 +70,7 @@
           <button mat-button (click)="navigateToPostDetails(element.id)">Ver mas...</button>
           <button mat-button color="primary" (click)="Addlike(element.id)">Me Gusta {{element.likes}}</button>
           <button mat-button color="warn">Compartir</button>
-          <button mat-button class="btn-reserv" (click)="addNewReserve(element.id,element.title,element.price)">Reservar</button>
+          <button mat-button class="btn-reserv" (click)="addNewReserve(element.id,element.title,element.price, element.ownerId)">Reservar</button>
         </mat-card-actions>
 
       </mat-card>

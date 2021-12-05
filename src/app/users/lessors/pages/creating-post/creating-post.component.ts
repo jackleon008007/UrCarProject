@@ -4,6 +4,7 @@ import {Car} from "../../model/cars";
 import {MatTableDataSource} from "@angular/material/table";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {LessorsService} from "../../services/lessors.service";
+import {StorageService} from "../../../../services/storage.service";
 
 @Component({
   selector: 'app-creating-post',
@@ -17,11 +18,13 @@ export class CreatingPostComponent implements OnInit {
   dataSource: MatTableDataSource<any>;
 
   public postCreateForm !:FormGroup
-
-  constructor(private carService:CarsService,private formBuilder: FormBuilder, private lessorServ:LessorsService) {
+  CurrentUserId:string;
+  constructor(private carService:CarsService,private formBuilder: FormBuilder,
+              private lessorServ:LessorsService, private storagser:StorageService) {
     this.dataSource= new MatTableDataSource<any>();
     this.carData= {} as Car;
     this.dataList = {} as Car[];
+    this.CurrentUserId="";
   }
 
   ngOnInit(): void {
@@ -41,15 +44,19 @@ export class CreatingPostComponent implements OnInit {
 
   }
   getAllCars(){
+    this.obtenerCurrentLessor();
     this.carService.getAll().subscribe((response: any)=>{
-      this.dataSource= response;
-      this.dataList = response;
+      this.dataSource= response.content;
+      this.dataList = response.content;
     })
   }
+  obtenerCurrentLessor(){
+    this.CurrentUserId=this.storagser.getLs("lessor")
+  }
   addCar(){
+    this.obtenerCurrentLessor();
     this.getAllCars();
 
-    this.carData.id = this.dataList.length+1;
     this.carData.image="../assets/cars/car8.png";
 
     this.carData.title=this.postCreateForm.value.title;
@@ -64,8 +71,9 @@ export class CreatingPostComponent implements OnInit {
     this.carData.bootType=this.postCreateForm.value.bootType;
     this.carData.plate=this.postCreateForm.value.plate;
 
-    this.carService.create(this.carData).subscribe((response: any) =>{
-      this.dataSource.data.push({...response });
+
+    this.carService.create(this.carData, this.CurrentUserId).subscribe((response: any) =>{
+      this.dataSource.data.push({...response.content });
       this.dataSource.data = this.dataSource.data.map((o: any) => {return o;});
     });
   }

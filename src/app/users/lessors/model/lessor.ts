@@ -2,7 +2,7 @@ export interface Lessor {
   id:number,
   name:string,
   lastName:string,
-  DNI: number,
+  dni: number,
   age:number,
   address: string,
   type:string,
@@ -15,8 +15,55 @@ export interface Lessor {
   postalCode:number,
   experience:string,
   recomends:string,
-  Driverlicense:number,
-  PayMethods: string
+  driverlicense:number,
+  payMethods: string
+}
+export interface Lessor {
+  content:          userleaseholder[];
+  pageable:         Pageable;
+  last:             boolean;
+  totalPages:       number;
+  totalElements:    number;
+  size:             number;
+  number:           number;
+  sort:             Sort;
+  first:            boolean;
+  numberOfElements: number;
+  empty:            boolean;
+}
 
+interface userleaseholder {
+  id:            number;
+  name:          string;
+  lastName:      string;
+  dni:           number;
+  age:           number;
+  address:       string;
+  type:          string;
+  imageProfile:  string;
+  numberPhone:   number;
+  email:         string;
+  licensePlate:  string;
+  district:      string;
+  postalCode:    number;
+  experience:    string;
+  recomends:     string;
+  password:      string;
+  driverlicense: number;
+  payMethods:    string;
+}
 
+interface Pageable {
+  sort:       Sort;
+  offset:     number;
+  pageNumber: number;
+  pageSize:   number;
+  unpaged:    boolean;
+  paged:      boolean;
+}
+
+interface Sort {
+  empty:    boolean;
+  sorted:   boolean;
+  unsorted: boolean;
 }
